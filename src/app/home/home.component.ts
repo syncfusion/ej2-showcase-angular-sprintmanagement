@@ -35,6 +35,16 @@ export class HomeComponent {
     const changeElement = document.getElementsByClassName('component-contain')[0] as HTMLElement;
     const desiredHeight = elementHeight - (filterHeight + titleHeight);
     changeElement.style.height = (desiredHeight -10)+ 'px';
+    const elementGrid = document.getElementById('component-render-grid');
+    if (elementGrid) {
+      if ((desiredHeight - 87.5) > 549 && (desiredHeight - 87.5) < 1433) {
+        elementGrid.style.height = (desiredHeight - 89) + 'px';
+      } else if ((desiredHeight - 87.5) > 1433) {
+        elementGrid.style.height = (desiredHeight - 94) + 'px';
+      } else {
+        elementGrid.style.height = (desiredHeight - 87.5) + 'px';
+      }
+    }
   }
   checkWindowWidthOnInit(): void {
     if (window.innerWidth < 500) {

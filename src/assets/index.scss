@@ -297,9 +297,9 @@ body, html {
 .add-overflow {
   overflow-y: auto;
 }
-#component-render-grid {
-  height: 78% !important;
-}
+// #component-render-grid {
+//   height: 78% !important;
+// }
 #component-renderf,
 #component-render-scheduler,#component-render-gantt,#component-render-grid {
 display: none;
@@ -518,18 +518,18 @@ opacity: 1;
   #component-render-gantt {
       width: 92vw !important;
   }
-  #component-render-grid {
-      height: 80% !important;
-  }
+  // #component-render-grid {
+  //     height: 80% !important;
+  // }
 }
 
 @media only screen and (min-width: 1900px) {
   #component-render-gantt {
       width: 94vw !important;
   }
-  #component-render-grid {
-      height: 80% !important;
-  }
+  // #component-render-grid {
+  //     height: 80% !important;
+  // }
 }
 @media (min-width: 1130px) and (max-width: 1170px) {
   .add-overflow {
@@ -548,9 +548,9 @@ opacity: 1;
       height :54vh;
       max-height: 54vh; /* Set max-height to 70% of viewport height */
   }
-  #component-render-grid {
-      height: 70% !important;
-  }
+  // #component-render-grid {
+  //     height: 70% !important;
+  // }
 }
 @media (min-width: 800px) and (max-width: 855px) {
   .inner-cadr {
@@ -591,9 +591,9 @@ opacity: 1;
       height :54vh;
       max-height: 54vh; /* Set max-height to 70% of viewport height */
   }
-  #component-render-grid {
-      height: 63% !important;
-  }
+  // #component-render-grid {
+  //     height: 63% !important;
+  // }
   .navimage-kanban,.navimage-scheduler,.navimage-gantt,.navimage-grid {
       width: 16px;
       height: 16px;
