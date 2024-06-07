@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { TimeRangeAppComponent} from '../app/home/timerange/timerange.component';
 import { DropDownAppComponent} from '../app/home/dropdown-list/dropdown-list.component';
 import { KanbanAppComponent} from '../app/home/kanban/kanban.component';
@@ -24,7 +23,6 @@ import { GroupService, SortService, GridComponent, EditService, ToolbarService, 
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
     TimeRangeAppComponent,
     DropDownAppComponent,
     KanbanAppComponent,
