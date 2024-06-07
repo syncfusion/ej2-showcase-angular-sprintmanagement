@@ -17,6 +17,7 @@ export class HomeComponent {
     this.bindTabClickEvent();
     this.bindEventListeners();
     this.bindScrollEvent();
+    this.adjustElementHeight()
    // this.updateCardValue()
   }
   @HostListener('window:resize', ['$event'])
