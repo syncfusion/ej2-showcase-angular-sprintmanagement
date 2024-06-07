@@ -1,0 +1,27 @@
+<ejs-gantt id="component-render-gantt" class="component-container1" #componentRenderGantt height="430px"
+    [dataSource]="data" [taskFields]="taskSettings" [allowSelection]="true" [toolbar]="toolbar"
+    [splitterSettings]="splitterSettings" [collapseAllParentTasks]="false"  viewType="ResourceView" [treeColumnIndex]="1"
+    height="100%" [editSettings]="editSettings" [highlightWeekends]="true" (dataBound)="dataBound()"
+    (queryTaskbarInfo)="queryTaskbarInfo($event)" (actionBegin)="actionBegin($event)"
+    (actionComplete)="actionComplete($event)" [resourceFields]="resourceFields" [resources]="resources" rowHeight="60">
+    <e-columns>
+        <e-column field='Id' width='64'></e-column>
+        <e-column field='Subject' headerText='Subject' width='350'></e-column>
+        <e-column field='StartTime' headerText='Start Time'></e-column>
+        <e-column field='EndTime' headerText='End Time'></e-column>
+        <e-column field='Progress' headerText='Progress' [validationRules]='validationRules'></e-column>
+        <e-column field='Status' headerText='Status' [edit]='statusEdit'></e-column>
+        <e-column field='Priority' headerText='Priority' [edit]='priorityEdit'></e-column>
+        <e-column field='resources'>
+            <ng-template #template let-data>
+                <div class="image" *ngIf="data.resources">
+                    <img src="https://ej2.syncfusion.com/angular/demos/assets/gantt/images/{{data.resources}}.png"
+                        style="height: 40px; width: 40px; margin-right: 8px;" />
+                    <div style="display: inline-block; width: calc(100% - 48px); position: relative;">
+                        {{data.resources}}
+                    </div>
+                </div>                
+            </ng-template>
+        </e-column>
+    </e-columns>
+</ejs-gantt>

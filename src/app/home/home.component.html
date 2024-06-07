@@ -1,0 +1,118 @@
+<div class="create-container" style="overflow: auto;">
+    <div class="nav-bar">
+        <div>
+            <div class="first-nav-div"></div>
+        </div>
+        <div class="centered-div">
+            <div class="parent-kanban" title="Kanban">
+                <div class="navimage-kanban"></div>
+            </div>
+            <div class="parent-scheduler" title="Scheduler">
+                <div class="navimage-scheduler"></div>
+            </div>
+            <div class="parent-gantt" title="Gantt Chart">
+                <div class="navimage-gantt"></div>
+            </div>
+            <div class="parent-grid" title="Grid">
+                <div class="navimage-grid"></div>
+            </div>
+        </div>
+        <div>
+            <div class="last-nav-div"></div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="title-container">
+            <div class="extra-circle"></div>
+            <div class="title">Sprint Management</div>
+            <button class="button" (click)="handleClick()">+ New Task</button>
+            <div class="circle"></div>
+        </div>
+        <div class="datasource-filter-container">
+            <div class="card-container">
+                <div class="inner-cadr">
+                    <div class="mainimagetodo">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo">TO DO</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+                <div class="inner-cadr">
+                    <div class="mainimageprogress">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo change-font">In Progress</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+                <div class="inner-cadr">
+                    <div class="mainimagetest">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo">Testing</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+                <div class="inner-cadr">
+                    <div class="mainimagedone">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo">Done</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <dropdown-list></dropdown-list>
+                <div id="image-container" class="custom-dropdown">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Martin%20Tamer.png" alt="Martin Tamer"
+                        class="circular-image" title="Martin Tamer" style="width: 35px; height: 35px;"
+                        (click)="imageClick($event)">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Rose%20Fuller.png" alt="Rose Fuller"
+                        class="circular-image" title="Rose Fuller" style="width: 35px; height: 35px;"
+                        (click)="imageClick($event)">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Margaret%20Buchanan.png"
+                        alt="Margaret Buchanan" class="circular-image" title="Margaret Buchanan"
+                        style="width: 35px; height: 35px;" (click)="imageClick($event)">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Fuller%20King.png" alt="Fuller King"
+                        class="circular-image" title="Fuller King" style="width: 35px; height: 35px;"
+                        (click)="imageClick($event)">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Davolio%20Fuller.png"
+                        alt="Davolio Fuller" class="circular-image" title="Davolio Fuller"
+                        style="width: 35px; height: 35px;" (click)="imageClick($event)">
+                </div>
+                <div id="timerangecompo" class="custom-dropdown">
+                    <timerange></timerange>
+                </div>
+            </div>
+        </div>
+        <div class="component-contain add-overflow"
+            style="border: 1px solid #cfd8dc; background-color: #ffffff; border-radius: 5px;">
+            <kanban></kanban>
+            <schedule></schedule>
+            <gantt></gantt>
+            <grid></grid>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile View Navigation Bar -->
+<div class="mobile-nav-bar">
+    <div class="parent-kanban">
+        <div class="navimage-kanban"></div>
+    </div>
+    <div class="parent-scheduler">
+        <div class="navimage-scheduler"></div>
+    </div>
+    <div class="parent-gantt">
+        <div class="navimage-gantt"></div>
+    </div>
+    <div class="parent-grid">
+        <div class="navimage-grid"></div>
+    </div>
+</div>
+
+<!-- New div for mobile view -->
+<div class="custom-div1" (click)="handleClick1()"></div>
+<!-- <common></common> -->
