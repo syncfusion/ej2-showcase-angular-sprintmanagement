@@ -1,0 +1,17 @@
+<ejs-schedule id="component-render-scheduler" class="component-container1" #componentRenderScheduler [showQuickInfo]=false height='100%' [selectedDate]="selectedDate" [group]="group"
+    [eventSettings]="eventSettings" currentView="TimelineMonth" (popupOpen)="popupOpen($event)" (eventRendered)="eventRendered($event)"
+    (actionBegin)="actionBegin($event)"  (actionComplete)="actionComplete($event)" (dataBound)="dataBound($event)">
+    <e-resources>
+        <e-resource field='resources' title='Resources' name='Projects' [dataSource]='editingResources' textField='resourceName' idField='resourceName'>
+        </e-resource>
+        <e-resource field='Id' title='Category' name='Categories' [dataSource]='commonData' textField='Subject' idField='Id' groupIDField='resources'>
+        </e-resource>
+    </e-resources>    
+    <e-views>
+        <e-view option="TimelineDay"></e-view>
+        <e-view option="TimelineWeek"></e-view>
+        <e-view option="TimelineWorkWeek"></e-view>
+        <e-view option="TimelineMonth"></e-view>
+        <e-view option="Agenda"></e-view>
+    </e-views>
+</ejs-schedule>

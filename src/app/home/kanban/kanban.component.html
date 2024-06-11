@@ -1,0 +1,67 @@
+<ejs-kanban 
+    id="component-renderf" 
+    class="component-container1" 
+    #componentRenderf
+    cssClass='kanban-overview'
+    [dataSource]="dataSource"
+    [keyField]="'Status'"
+    [enableTooltip]="true"
+    [height]="'100%'"
+    [swimlaneSettings] ="swimlaneSettings"
+    (dialogClose)="onDialogClose($event)"
+    (dialogOpen)="onDialogOpen($event)"
+    (actionBegin)="onActionBegin($event)"
+    (actionComplete)="onActionComplete($event)"
+    (dataBound)="onDataBound($event)"
+    [cardSettings]="cardSettings"
+    [dialogSettings]="dialogSettings"
+    (cardRendered)="onCardRendered($event)"
+    [columns]="columns"
+>
+<e-columns>
+    <e-column *ngFor="let column of columns" [headerText]="column.headerText" [keyField]="column.keyField">
+        <ng-template #template let-data>
+            <div class="header-template-wrap">
+                <div class="header-icon e-icons {{ data.keyField }}"></div>
+                <div class="header-text">{{ data.headerText }}</div>
+            </div>
+        </ng-template>
+    </e-column>
+</e-columns>
+
+<ng-template #cardSettingsTemplate let-data>
+    <div class='card-template'>
+      <div class='e-card-header'>
+        <div class='e-card-header-caption'>
+          <div class='e-card-header-title e-tooltip-text'>{{data.resources}}</div>
+        </div>
+      </div>
+      <div class='e-card-content e-tooltip-text'>
+        <div class='e-text'>{{data.Subject}}</div>
+      </div>
+      <div *ngIf="!isStatusOpenOrClose(data)">
+        <div class="e-progress-bar" style="padding-left: 12px;">
+          <div class="e-progress-bar-container">
+            <div class="e-progress-bar-background" style="width: 100%;">
+              <div class="e-progress-bar-progress" [style.width.%]="data.Progress" style="background: rgba(173, 216, 230); height: 5px;"></div>
+              <div class="e-progress-bar-text">{{ data.Progress }}%</div>
+            </div>
+          </div>
+        </div>
+      </div>      
+      <div class='e-card-custom-footer'>
+        <ng-container *ngIf="data.Tags">
+          <div class="e-card-tag-field e-tooltip-text" *ngFor="let tag of data.Tags.split(','); let i = index"
+            [style.backgroundColor]="getBackgroundColor(tag)" [style.color]="getColor(tag)">
+            {{ tag }}
+          </div>
+        </ng-container>
+        <ng-container *ngIf="data.resources">
+            <img src="https://ej2.syncfusion.com/angular/demos/assets/gantt/images/{{ data.resources }}.png" alt="Image" class="e-card-avatar" [style.width.px]="30"
+                [style.height.px]="30"
+                style="text-align: center; background: gainsboro; color: #6b6b6b; border-radius: 50%; position: absolute; right: 12px; bottom: 10px; font-size: 12px; font-weight: 400;">
+        </ng-container>              
+      </div>
+    </div>
+</ng-template>
+</ejs-kanban>

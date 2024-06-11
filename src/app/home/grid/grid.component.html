@@ -1,0 +1,20 @@
+<ejs-grid id="component-render-grid" class="component-container1" #componentRenderGrid [dataSource]='data' (actionBegin)="actionBegin($event)" (dataBound)="dataBound()" [toolbar] ="toolbar" [allowGrouping]="true"  [groupSettings]="groupSettings" height="100%" [allowSorting]='true'
+[editSettings]='editSettings'>
+    <e-columns>
+        <e-column field='Id' [allowEditing]='true' [isPrimaryKey]='true'></e-column>
+        <e-column field='Subject' width='350px'></e-column>
+        <e-column field='StartTime' headerText='Start Time' editType='datetimepickeredit' [valueAccessor]='startdateValueAccessor'></e-column>
+        <e-column field='EndTime' headerText='End Time' editType='datetimepickeredit' [valueAccessor]='enddateValueAccessor'></e-column>
+        <e-column field='Progress' editType='numericedit' [validationRules]='validationRules'>
+        </e-column>
+        <e-column field='Status' [edit]='statusEdit' [validationRules]='statusValidationRules'>
+        </e-column>
+        <e-column field='Priority' [edit]='priorityEdit'>
+        </e-column>
+        <e-column field='resources' headerText='Resources' [validationRules]='{ required: true }' [edit]='resourceEdit'>
+        </e-column>
+    </e-columns>
+    <ng-template #groupSettingsCaptionTemplate let-data>
+        <span class="groupItems">{{ data.key }}</span>
+    </ng-template>
+</ejs-grid>
