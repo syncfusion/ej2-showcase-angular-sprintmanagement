@@ -46,7 +46,6 @@
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
-    "@syncfusion/ej2-showcase-helper": "*",
     "@angular-devkit/build-angular": "^15.2.6",
     "@angular/cli": "~15.2.6",
     "@angular/compiler-cli": "^15.2.0",
