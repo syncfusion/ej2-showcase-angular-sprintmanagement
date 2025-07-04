@@ -46,6 +46,16 @@ export class HomeComponent {
         elementGrid.style.height = (desiredHeight - 87.5) + 'px';
       }
     }
+    setTimeout(() => {
+      const elementKanban = (document.getElementById('component-renderf') as any)['ej2_instances'][0];
+      if (elementKanban) {
+        if (desiredHeight > 1645) {
+          elementKanban.height = Math.floor((desiredHeight - 20)) + 'px';
+        } else {
+          elementKanban.height = Math.floor((desiredHeight - 13)) + 'px';
+        }
+      }
+    }, 500);
   }
   checkWindowWidthOnInit(): void {
     if (window.innerWidth < 500) {

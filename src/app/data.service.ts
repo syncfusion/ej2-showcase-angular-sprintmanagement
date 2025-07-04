@@ -77,6 +77,7 @@ export class DataService {
   updateSprintData(projectValue:any, instance:any, storeNewRecord:any) {
     switch (projectValue) {
       case 'Project1':
+        this.sprintData1 = [...this.sprintData1];
         this.sprintData1.push(storeNewRecord)
         this.commonData = instance.dataSource
         break;

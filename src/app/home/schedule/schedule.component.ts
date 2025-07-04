@@ -70,7 +70,7 @@ export class ScheduleAppComponent {
         errorMessage.textContent = 'Only Done can be selected if the progress is 100';
         row.appendChild(errorMessage);
         formElement.insertBefore(row, formElement.firstChild);
-        const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save.e-flat') as HTMLButtonElement;
+        const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save') as HTMLButtonElement;
         let dropDownList = new DropDownList({
           dataSource: [
             { text: 'Open', value: 'Open' },
@@ -169,7 +169,7 @@ export class ScheduleAppComponent {
         errorMessage.style.display = 'none'; // Initially hide the error message
         inputEle.addEventListener('focusout', function (event) {
           const schedulerStatusElement: any = document.getElementsByClassName('custom-field-row')[0].querySelector('input')
-          const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save.e-flat') as HTMLButtonElement;
+          const buttonElement = document.querySelector('.e-schedule-dialog.e-control.e-btn.e-lib.e-primary.e-event-save') as HTMLButtonElement;
           let enteredValue = parseInt(inputEle.value, 10);
           if (enteredValue < 0) {
             inputEle.value = '0'; // Set value as string '0'
