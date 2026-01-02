@@ -6,7 +6,7 @@ The Sprint Management Showcase web application sample is a practical demonstrati
 To run the project following prerequisite are required
 
 * `Node Version`: 18.13.0
-* `Angular Version`: 15.2.0
+* `Angular Version`: 19.2.16
 
 ## Installation
 
